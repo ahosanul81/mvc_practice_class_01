@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "ProductList";
+}
+
+<h2 class="display-4 alert alert-info" > Product Info </h2>
+
+<h1 class="display-5">Product List : VeiwBag</h1>
+@{
+            foreach (var item in ViewBag.prList)
+            {
+                <li>@item</li>
+            }
+}
+<h1 class="display-5">Product List : VeiwData</h1>
+@{
+            foreach (var item in ViewData["pList"]  as List<string> )
+            {
+                <li>@item</li>
+            }
+}
+<h1 class="display-5">Product List : TempData</h1>
+@{
+            foreach (var item in TempData["tList"] as List<string> ?? new List<string>())
+            {
+                <li>@item</li>
+            }
+}
+
+
